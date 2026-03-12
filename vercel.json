@@ -1,15 +1,4 @@
 {
-  "installCommand": "npm install && npm --prefix=frontend install",
-  "buildCommand": "npm run build",
-  "outputDirectory": "frontend/build",
-  "routes": [
-    {
-      "src": "^/api/(.*)",
-      "dest": "/api/$1"
-    },
-    {
-      "src": "^(?!/?api).*",
-      "dest": "/index.html"
-    }
-  ]
+  "buildCommand": "npm --prefix=frontend run build",
+  "outputDirectory": "frontend/build"
 }

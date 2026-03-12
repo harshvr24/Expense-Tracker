@@ -38,7 +38,12 @@ app.get('/health', (req, res) => {
 
 // Catch-all route - serve React app for non-API routes
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  // Don't serve React for API routes - let Vercel handle them
+  if (req.path.startsWith('/api')) {
+    res.status(404).json({ error: 'API endpoint not found' });
+  } else {
+    res.sendFile(path.join(__dirname, 'frontend', 'build', 'index.html'));
+  }
 });
 
 // Only listen if not in Vercel environment
