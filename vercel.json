@@ -1,7 +1,4 @@
 {
-  "buildCommand": "npm run build",
-  "installCommand": "npm install",
-  "outputDirectory": "frontend/build",
   "routes": [
     {
       "src": "^/api/(.*)",
@@ -11,8 +8,5 @@
       "src": "^(?!/?api).*",
       "dest": "/index.html"
     }
-  ],
-  "env": {
-    "NODE_ENV": "production"
-  }
+  ]
 }
