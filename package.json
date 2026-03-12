@@ -1,6 +1,7 @@
 {
   "name": "expense-tracker-vercel",
   "version": "1.0.0",
+  "type": "module",
   "private": true,
   "description": "Full-stack expense tracker app deployable on Vercel",
   "scripts": {
