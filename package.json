@@ -5,7 +5,7 @@
   "description": "Full-stack expense tracker app deployable on Vercel",
   "scripts": {
     "dev": "concurrently \"cd frontend && npm start\" \"vercel dev\"",
-    "build": "cd frontend && npm run build",
+    "build": "npm --prefix=frontend run build",
     "start": "node server.js",
     "install-all": "npm install && cd frontend && npm install"
   },
